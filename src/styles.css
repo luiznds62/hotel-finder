@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap');
 
 :root {
-  --primary: #1e90ff;
-  --secondary: #ffffff;
-  --accent: #fffff;
+  --primary: #2D97F4;
+  --accent: #FF8B02;
   --white: #FFFFFF;
-  --black: #FFFFFF;
-  --dark-gray: #FFFFFF;
-  --light-gray: #FFFFF;
+  --black: #090909;
+  --dark-gray: #c2c3c5;
+  --light-gray: #B7B8BC;
+  --darker-gray: #696969;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -23,11 +23,22 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, p {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font-family: 'Nunito Sans', sans-serif;
   vertical-align: baseline;
+}
+
+.form-control:focus {
+  outline: 0 !important;
+  border-color: initial;
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: var(--darker-gray);
+  font-weight: 900;
 }
