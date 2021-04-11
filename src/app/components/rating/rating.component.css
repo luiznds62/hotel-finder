@@ -1,0 +1,51 @@
+.rating-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rating-description {
+  padding-left: 4%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.rating-excelent {
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #00aa6c;
+  color: var(--white);
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 6px;
+}
+
+.rating-good {
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #428500;
+  color: var(--white);
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 6px;
+}
+
+.rating-bad {
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #F2B203;
+  color: var(--white);
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 6px;
+}
+
+.rating-awful {
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #CB2C30;
+  color: var(--white);
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 6px;
+}
