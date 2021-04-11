@@ -1,0 +1,16 @@
+.room-list-item {
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1%;
+}
+
+.room-list-item-image {
+  height: 100%;
+  width: 40%;
+}
+
+.card-room-list-item-content {
+  padding-top: 1%;
+  padding-left: 2%;
+}

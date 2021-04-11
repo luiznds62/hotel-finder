@@ -1,0 +1,10 @@
+<ul class="list-unstyled" *ngIf="rooms.length > 0">
+  <li *ngFor="let room of rooms">
+    <app-room-list-item [room]="room"></app-room-list-item>
+  </li>
+</ul>
+<div class="not-found" *ngIf="rooms.length === 0">
+  <p class="text-center">
+    Oops, infelizmente não encontramos nenhuma acomodação...
+  </p>
+</div>
