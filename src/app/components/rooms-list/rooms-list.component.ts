@@ -9,11 +9,17 @@ import { Room, RoomType } from "../../models/room.model";
 export class RoomsListComponent implements OnInit {
   @Input() rooms: Room[];
 
-  constructor() {
-    
+  currentPage: number = 1;
+
+  constructor() {}
+
+  ngOnInit() {}
+
+  filterByName(room: Room) {
+    return true;
   }
 
-  ngOnInit() {
-    
+  pageChanged(event) {
+    this.currentPage = event;
   }
 }

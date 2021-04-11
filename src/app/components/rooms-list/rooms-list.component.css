@@ -1,4 +1,13 @@
 .not-found {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+pagination-controls {
+  float: right;
+}
+
+.pagination-control /deep/ .ngx-pagination .current {
+  background: var(--primary)!important;
+  border-radius: 6px;
 }

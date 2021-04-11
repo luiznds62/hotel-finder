@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 1%;
+  border: 0;
 }
 
 .room-list-item:hover {
@@ -109,7 +110,7 @@
 
 .detail-text {
   padding-left: 4%;
-  font-size: 16px;
+  font-size: 12px;
   color: var(--darker-gray);
 }
 
@@ -120,4 +121,29 @@
 
 .card-room-list-item-evaluations {
   padding-top: 10%;
+}
+
+@media (max-width: 600px) {
+  .room-list-item {
+    margin-bottom: 6%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+
+  .room-list-item-image {
+    display: none;
+  }
+
+  .card-room-list-item-content {
+    margin-left: 10%;
+  }
+
+  /* 
+  .card-room-list-item-aditional {
+    margin-left: 20%;
+  }
+
+  .card-room-list-item-evaluations {
+    margin-left: 20%;
+  } */
 }

@@ -1,8 +1,24 @@
 <ul class="list-unstyled" *ngIf="rooms.length > 0">
-  <li *ngFor="let room of rooms">
+  <li
+    *ngFor="
+      let room of rooms
+        | callback: filterByName
+        | paginate
+          : {
+              itemsPerPage: 4,
+              currentPage: currentPage,
+              totalItems: rooms.length
+            }
+    "
+  >
     <app-room-list-item [room]="room"></app-room-list-item>
   </li>
 </ul>
+<pagination-controls
+  class="pagination-control"
+  (pageChange)="pageChanged($event)"
+  directionLinks="false"
+></pagination-controls>
 <div class="not-found" *ngIf="rooms.length === 0">
   <p class="text-center">
     Oops, infelizmente não encontramos nenhuma acomodação...
