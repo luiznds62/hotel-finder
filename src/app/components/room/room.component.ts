@@ -15,7 +15,7 @@ export class RoomComponent implements OnInit {
 
   ngOnInit() {
     this.pushRoom();
-    this.pushRoom();
+    this.pushRoom2();
   }
 
   pushRoom() {
@@ -23,12 +23,46 @@ export class RoomComponent implements OnInit {
       name: "Hotel Ibis Budget",
       type: RoomType.HOTEL,
       price: 123,
-      promotionalPrice: 0,
-      rating: 3,
+      promotionalPrice: 111,
+      rating: 8.1,
+      stars: 4,
+      isPopular: true,
+      details: {
+        haveWiFi: true,
+        haveFreeBreakfast: true,
+        haveFreeCancelation: true,
+        isInCenter: true,
+        isTakingSafetyMeasures: true,
+      },
+      city: {
+        name: "Blumenau",
+        state: "Santa Catarina",
+      },
+      photos: [
+        {
+          main: true,
+          src:
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d6/7c/08/duplex-terrace-eiffel.jpg?w=400&h=300&s=1",
+        },
+      ],
+    });
+  }
+
+  pushRoom2() {
+    this.rooms.push({
+      name: "Hotel Ibis Budget",
+      type: RoomType.HOTEL,
+      price: 123,
+      promotionalPrice: 111,
+      rating: 8.1,
+      stars: 4,
+      isPopular: true,
       details: {
         haveWiFi: true,
         haveFreeBreakfast: false,
-        isNextToCenter: true,
+        haveFreeCancelation: true,
+        isInCenter: false,
+        distanceToCenterKM: 0.6,
         isTakingSafetyMeasures: true,
       },
       city: {

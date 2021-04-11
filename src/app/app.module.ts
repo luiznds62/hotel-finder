@@ -12,6 +12,8 @@ import { RoomsFilterComponent } from './components/rooms-filter/rooms-filter.com
 import { RoomsSorterComponent } from './components/rooms-sorter/rooms-sorter.component';
 import { RoomComponent } from './components/room/room.component';
 import { RoomListItemComponent } from './components/room-list-item/room-list-item.component';
+import { StarsRatingComponent } from './components/stars-rating/stars-rating.component';
+import { RatingComponent } from './components/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RoomListItemComponent } from './components/room-list-item/room-list-ite
     RoomsFilterComponent,
     RoomsSorterComponent,
     RoomComponent,
-    RoomListItemComponent
+    RoomListItemComponent,
+    StarsRatingComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

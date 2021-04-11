@@ -9,6 +9,7 @@
   --dark-gray: #c2c3c5;
   --light-gray: #b7b8bc;
   --darker-gray: #696969;
+  --background-gray: #f2f2f2;
 }
 
 html,
@@ -101,6 +102,10 @@ p {
   vertical-align: baseline;
 }
 
+body {
+  background-color: var(--background-gray);
+}
+
 p {
   font-weight: 900;
 }
@@ -118,9 +123,4 @@ p {
 
 .card {
   border-radius: 0px;
-}
-
-.card:hover {
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(166, 173, 201, 0.2);
 }

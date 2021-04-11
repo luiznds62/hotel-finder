@@ -1,5 +1,7 @@
 .navbar {
+  background-color: var(--white);
   display: flex !important;
+  padding-bottom: 1%
 }
 
 .navbar-brand {
@@ -15,13 +17,13 @@
   flex-direction: row;
   border-radius: 8px;
   background-color: var(--white);
-  border-color: var(--dark-gray)!important;
+  border-color: var(--dark-gray) !important;
   border: 2px;
   border-style: solid;
 }
 
 .navbar-search-input {
-  height: 42px;
+  height: 38px;
   border: 0;
   font-weight: bolder;
   color: var(--black) !important;
@@ -32,6 +34,10 @@
   align-self: center;
   color: var(--black);
   padding-left: 4%;
+}
+
+.navbar-divider {
+  margin-top: 0;
 }
 
 @media (max-width: 600px) {

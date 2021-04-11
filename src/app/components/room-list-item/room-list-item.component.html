@@ -1,6 +1,73 @@
 <div class="card room-list-item">
   <img class="room-list-item-image" src="{{ room.photos[0].src }}" />
   <div class="card-room-list-item-content">
-    <p>{{ room.name }}</p>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card-room-list-item-title">{{ room.name }}</div>
+        <div class="card-room-list-item-room-header">
+          <app-stars-rating [stars]="room.stars"></app-stars-rating>
+          <span class="card-room-list-item-room-type">{{ room.type }}</span>
+          <span *ngIf="room.isPopular" class="popular-badge">Popular</span>
+        </div>
+        <div class="card-room-list-item-room-prices">
+          <h3
+            [ngClass]="{
+              'card-room-list-item-room-price-out': room.promotionalPrice !== 0
+            }"
+            class="card-room-list-item-room-price"
+          >
+            {{ room.price | currency: "BRL" }}
+          </h3>
+          <h3
+            *ngIf="room.promotionalPrice !== 0"
+            class="card-room-list-item-room-promotional-price"
+          >
+            {{ room.price | currency: "BRL" }}
+          </h3>
+        </div>
+        <div class="card-room-list-item-room-actions">
+          <button class="btn btn-details">Ver detalhes</button>
+        </div>
+        <div
+          *ngIf="room.details.haveFreeCancelation"
+          class="card-room-list-item-room-free-cancelation"
+        >
+          <i class="fas fa-check"></i>
+          <span class="free-cancelation-text">Cancelamento gratuito</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-room-list-item-aditional">
+          <div class="card-room-list-item-is-center">
+            <i class="fas fa-map-marker-alt icon-detail"></i>
+            <span *ngIf="room.details.isInCenter" class="detail-text">
+              Localizado no centro
+            </span>
+            <span *ngIf="!room.details.isInCenter" class="detail-text">
+              {{ room.details.distanceToCenterKM }} km até o centro da cidade
+            </span>
+          </div>
+          <hr class="detail-divider" />
+          <div
+            *ngIf="room.details.haveWiFi"
+            class="card-room-list-item-have-wifi"
+          >
+            <i class="fas fa-wifi icon-detail"></i>
+            <span class="detail-text"> WiFi Grátis </span>
+          </div>
+          <hr class="detail-divider" />
+          <div
+            *ngIf="room.details.haveFreeBreakfast"
+            class="card-room-list-item-have-breakfast"
+          >
+            <i class="fas fa-utensils icon-detail"></i>
+            <span class="detail-text"> Café da manhã grátis </span>
+          </div>
+        </div>
+        <div class="card-room-list-item-evaluations">
+          <app-rating [rating]="room.rating"></app-rating>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

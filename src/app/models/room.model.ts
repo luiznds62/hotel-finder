@@ -16,7 +16,9 @@ export class Room {
     type: RoomType;
     price: number;
     promotionalPrice: number;
+    isPopular: boolean;
     rating: number;
+    stars: number;
     details: RoomDetails;
     city: City;
     photos: Photo[];
