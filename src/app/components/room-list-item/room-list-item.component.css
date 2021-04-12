@@ -105,11 +105,11 @@
 }
 
 .icon-detail {
+  padding-right: 4%;
   color: var(--dark-gray);
 }
 
 .detail-text {
-  padding-left: 4%;
   font-size: 12px;
   color: var(--darker-gray);
 }

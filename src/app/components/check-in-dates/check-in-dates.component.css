@@ -1,0 +1,25 @@
+.check-in-container {
+  height: 40px;
+  border: 0.5px;
+  border-color: var(--darker-gray) !important;
+  border-style: solid;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-check-in {
+  width: 100%;
+  margin-top: 2%;
+}
+
+.check-in-dates-span {
+  cursor: pointer;
+  padding-left: 6%;
+  width: 100%;
+}
+
+.check-in-dates-text {
+  margin-left: 4%;
+  color: var(--darker-gray) !important;
+}

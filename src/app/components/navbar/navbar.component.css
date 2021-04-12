@@ -1,8 +1,7 @@
 .navbar {
-  background-color: var(--white);
+  background-color: var(--primary);
   display: flex !important;
   padding-bottom: 1%;
-  margin-bottom: 1%;
 }
 
 .navbar-brand {
@@ -18,8 +17,8 @@
   flex-direction: row;
   border-radius: 8px;
   background-color: var(--white);
-  border-color: var(--dark-gray) !important;
-  border: 2px;
+  border-color: var(--darker-gray) !important;
+  border: 0.5px;
   border-style: solid;
 }
 

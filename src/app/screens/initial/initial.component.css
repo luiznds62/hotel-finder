@@ -1,0 +1,33 @@
+.next-trip-container {
+  background-color: var(--white);
+  width: 100%;
+}
+
+.next-trip {
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+
+.next-trip-title {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.next-trip-subtitle {
+  color: var(--darker-gray);
+}
+
+.next-trip-search {
+  padding-top: 2%;
+}
+
+.btn-next-trip-search {
+  width: 100%;
+}
+
+.btn-next-trip-search:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+}
