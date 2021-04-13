@@ -1,11 +1,37 @@
 <div class="check-in-container dropdown">
-  <span id="dropdownMenuButton" class="check-in-dates-span" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <span
+    id="dropdownMenuButton"
+    class="check-in-dates-span"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
     <i class="fas fa-calendar-alt"></i>
     <span class="check-in-dates-text">Check-in - Check-out</span>
   </span>
-  <div class="dropdown-menu dropdown-check-in" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+  <div
+    class="dropdown-menu dropdown-check-in"
+    aria-labelledby="dropdownMenuButton"
+  >
+    <a class="dropdown-item" href="#">
+      <div class="row">
+        <div class="col-6">
+          <input
+            class="form-control"
+            type="date"
+            [(ngModel)]="initialDate"
+            (ngModelChange)="onChangeInitial($event)"
+          />
+        </div>
+        <div class="col-6">
+          <input
+            class="form-control"
+            type="date"
+            [(ngModel)]="finalDate"
+            (ngModelChange)="onChangeFinal($event)"
+          />
+        </div>
+      </div>
+    </a>
   </div>
 </div>

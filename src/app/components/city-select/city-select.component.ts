@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
+import { EventEmitter, Component, OnInit, Output } from "@angular/core";
 @Component({
-  selector: 'app-city-select',
-  templateUrl: './city-select.component.html',
-  styleUrls: ['./city-select.component.css']
+  selector: "app-city-select",
+  templateUrl: "./city-select.component.html",
+  styleUrls: ["./city-select.component.css"],
 })
 export class CitySelectComponent implements OnInit {
+  @Output() onCityPicked = new EventEmitter();
+  city: any = "default";
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onChangeCity(city: string) {
+    this.onCityPicked.emit(city);
   }
-
 }

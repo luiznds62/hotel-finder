@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgxPaginationModule } from "ngx-pagination";
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
@@ -19,8 +20,8 @@ import { CitySelectComponent } from "./components/city-select/city-select.compon
 import { CallbackPipe } from "./pipes/CallbackPipe";
 
 import { HomeComponent } from "./screens/home/home.component";
-import { InitialComponent } from './screens/initial/initial.component';
-import { CheckInDatesComponent } from './components/check-in-dates/check-in-dates.component';
+import { InitialComponent } from "./screens/initial/initial.component";
+import { CheckInDatesComponent } from "./components/check-in-dates/check-in-dates.component";
 
 @NgModule({
   declarations: [
@@ -39,9 +40,14 @@ import { CheckInDatesComponent } from './components/check-in-dates/check-in-date
     CallbackPipe,
     InitialComponent,
     CitySelectComponent,
-    CheckInDatesComponent
+    CheckInDatesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgxPaginationModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    NgxPaginationModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
