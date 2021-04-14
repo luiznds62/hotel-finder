@@ -1,10 +1,14 @@
 <app-navbar></app-navbar>
 <div class="next-trip-container shadow-sm">
   <div class="container next-trip">
-    <h1 class="heading-title">Qual será sua próxima viagem?</h1>
-    <span class="next-trip-subtitle">
-      Encontre nossos quartos e hóteis por todo Brasil!
-    </span>
+    <div class="row">
+      <div class="col headings">
+        <h1 class="heading-title text-white">Qual será sua próxima viagem?</h1>
+        <span class="sub-heading-title text-white">
+          Encontre nossos quartos e hóteis por todo Brasil!
+        </span>
+      </div>
+    </div>
     <div class="row next-trip-search">
       <div class="col-md-4 city-select-initial-container">
         <app-city-select (onCityPicked)="getCity($event)"></app-city-select>
@@ -15,15 +19,29 @@
           (onFinalDatePicked)="getFinalDate($event)"
         ></app-check-in-dates>
       </div>
-      <div class="col-md-4">
-        <button (click)="search()" type="button" class="btn btn-primary btn-next-trip-search">
+      <div class="col-md-4 btn-next-trip-container">
+        <button
+          (click)="search()"
+          type="button"
+          class="btn btn-next-trip-search"
+        >
           Pesquisar
         </button>
       </div>
     </div>
+    <div class="row pt-3 w-50 text-after-next-trip">
+      <div class="col pl-0">
+        <span class="text-white">
+          Possuímos opções para todos os bolsos e estamos prontos para te ajudar
+          a escolher a melhor acomodação com os melhores preços!
+        </span>
+      </div>
+    </div>
   </div>
 </div>
-<div class="container cities-list-container">
-  <app-cities-list></app-cities-list>
+<div class="cities-list-container">
+  <div class="container">
+    <app-cities-list></app-cities-list>
+  </div>
 </div>
 <app-footer></app-footer>

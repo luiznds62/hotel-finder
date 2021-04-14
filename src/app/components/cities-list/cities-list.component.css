@@ -22,9 +22,13 @@
 .card-body-city {
   display: flex;
   flex-direction: column;
-  padding-left: 6%;
+  padding-left: 0;
   padding-top: 4%;
   padding-bottom: 6%;
+}
+
+.city-image {
+  border-radius: 12px;
 }
 
 @media (max-width: 600px) {

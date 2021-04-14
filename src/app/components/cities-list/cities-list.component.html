@@ -1,21 +1,29 @@
 <div class="row">
   <div class="col-12">
-    <h1 class="sub-heading-title">
-      Confira nossos hotéis e quartos por cidade
-    </h1>
+    <h1 class="heading-title">Confira nossos hotéis e quartos por cidade</h1>
+    <span class="sub-heading-title text-gray">
+      Escolha uma cidade e comece a procurar sua acomodação
+    </span>
   </div>
   <div class="cities-list-items">
     <ul class="list-unstyled cities-list">
-      <li class="cities-list-item" *ngFor="let city of cities" (click)="navigateToRooms(city)">
-        <div class="card city-card shadow-sm">
+      <li
+        class="cities-list-item"
+        *ngFor="let city of cities"
+        (click)="navigateToRooms(city)"
+      >
+        <div class="card city-card">
           <img
-            class="card-img-top"
+            class="card-img-top city-image"
             src="{{ city.imageSrc }}"
             alt="Foto da cidade"
           />
           <div class="card-body-city">
-            <span class="sub-heading-title">{{city.name}}</span>
-            <span class="sub-heading-sub-title">{{city.state}}</span>
+            <span class="sub-heading-title">{{ city.name }}</span>
+            <span class="sub-heading-sub-title">{{ city.state }}</span>
+            <span class="sub-heading-sub-title text-bold mt-1">
+              {{ city.averagePrice | currency: "BRL" }} em média
+            </span>
           </div>
         </div>
       </li>

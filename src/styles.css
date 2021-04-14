@@ -126,21 +126,40 @@ p {
 }
 
 .heading-title {
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 900;
+  font-size: 28px;
 }
 
 .sub-heading-title {
-  font-weight: 600;
   font-size: 20px;
 }
 
 .sub-heading-sub-title {
-  font-size: 16;
+  font-size: 14px;
   color: var(--dark-gray);
 }
 
 .btn-primary {
   background-color: var(--primary);
   border-color: var(--primary);
+}
+
+.text-white {
+  color: var(--primary);
+}
+
+.text-gray {
+  color: var(--darker-gray);
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.text-bold{
+  font-weight: 900;
+}
+
+.w-50 {
+  width: 50%;
 }
