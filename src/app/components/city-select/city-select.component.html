@@ -7,9 +7,8 @@
     aria-label="Search"
   >
     <option value="default" disabled="true">Qual seu destino?</option>
-    <option value="Balneário Camboriú">Balneário Camboriú</option>
-    <option value="Florianópolis">Florianópolis</option>
-    <option value="São Paulo">São Paulo</option>
-    <option value="Salvador">Salvador</option>
+    <option value="{{city.name}}" *ngFor="let city of cities">
+      {{ city.name }}
+    </option>
   </select>
 </div>

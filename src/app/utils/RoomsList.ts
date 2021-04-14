@@ -1,4 +1,5 @@
 import { RoomType } from "../models/room.model";
+import * as moment from "moment";
 
 export const roomsList = [
   {
@@ -9,8 +10,8 @@ export const roomsList = [
     rating: 8.1,
     stars: 4,
     isPopular: true,
-    checkInAvailable: new Date(),
-    checkOutAvailable: new Date(),
+    checkInAvailable: moment("2021-04-01"),
+    checkOutAvailable: moment("2021-04-30"),
     details: {
       haveWiFi: true,
       haveFreeBreakfast: true,
@@ -38,8 +39,8 @@ export const roomsList = [
     rating: 7.2,
     stars: 4,
     isPopular: true,
-    checkInAvailable: new Date(),
-    checkOutAvailable: new Date(),
+    checkInAvailable: moment("2021-02-01"),
+    checkOutAvailable: moment("2021-06-30"),
     details: {
       haveWiFi: true,
       haveFreeBreakfast: false,
@@ -68,8 +69,8 @@ export const roomsList = [
     rating: 4.4,
     stars: 4,
     isPopular: true,
-    checkInAvailable: new Date(),
-    checkOutAvailable: new Date(),
+    checkInAvailable: moment("2021-04-01"),
+    checkOutAvailable: moment("2021-04-30"),
     details: {
       haveWiFi: true,
       haveFreeBreakfast: false,
@@ -98,8 +99,8 @@ export const roomsList = [
     rating: 1.3,
     stars: 4,
     isPopular: true,
-    checkInAvailable: new Date(),
-    checkOutAvailable: new Date(),
+    checkInAvailable: moment("2021-06-01"),
+    checkOutAvailable: moment("2021-08-30"),
     details: {
       haveWiFi: true,
       haveFreeBreakfast: false,
@@ -119,5 +120,5 @@ export const roomsList = [
           "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d6/7c/08/duplex-terrace-eiffel.jpg?w=400&h=300&s=1",
       },
     ],
-  }
+  },
 ];

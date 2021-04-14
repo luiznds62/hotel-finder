@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-initial",
@@ -10,7 +11,7 @@ export class InitialComponent implements OnInit {
   initialDate: Date;
   finalDate: Date;
 
-  constructor() {}
+  constructor(private route: Router) {}
 
   ngOnInit() {}
 
@@ -24,5 +25,27 @@ export class InitialComponent implements OnInit {
 
   public getFinalDate(date: Date): void {
     this.finalDate = date;
+  }
+
+  getFilters() {
+    const filters: any = {};
+
+    if (this.city) {
+      filters["city.name"] = this.city;
+    }
+
+    if (this.initialDate) {
+      filters.initialDate = this.initialDate;
+    }
+
+    if (this.finalDate) {
+      filters.finalDate = this.finalDate;
+    }
+
+    return filters;
+  }
+
+  search() {
+    this.route.navigate(["./home", this.getFilters()]);
   }
 }
