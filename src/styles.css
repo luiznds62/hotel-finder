@@ -124,3 +124,18 @@ p {
 .card {
   border-radius: 0px;
 }
+
+.heading-title {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.sub-heading-title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.sub-heading-sub-title {
+  font-size: 16;
+  color: var(--dark-gray);
+}

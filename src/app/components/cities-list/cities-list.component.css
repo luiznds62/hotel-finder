@@ -1,0 +1,27 @@
+.cities-list-items {
+  padding-top: 1%;
+}
+
+.cities-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cities-list-item {
+    cursor: pointer;
+    padding-bottom: 2%;
+}
+
+.city-card {
+  border: 0;
+}
+
+.card-body-city {
+  display: flex;
+  flex-direction: column;
+  padding-left: 6%;
+  padding-top: 4%;
+  padding-bottom: 6%;
+}

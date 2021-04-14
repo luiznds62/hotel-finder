@@ -13,7 +13,6 @@ export class RoomListItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.room);
   }
 
 }

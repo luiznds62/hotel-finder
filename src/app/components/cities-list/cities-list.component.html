@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-12">
+    <h1 class="sub-heading-title">
+      Confira nossos hotéis e quartos por cidade
+    </h1>
+  </div>
+  <div class="cities-list-items">
+    <ul class="list-unstyled cities-list">
+      <li class="cities-list-item" *ngFor="let city of cities" (click)="navigateToRooms(city)">
+        <div class="card city-card shadow-sm" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="{{ city.imageSrc }}"
+            alt="Foto da cidade"
+          />
+          <div class="card-body-city">
+            <span class="sub-heading-title">{{city.name}}</span>
+            <span class="sub-heading-sub-title">{{city.state}}</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

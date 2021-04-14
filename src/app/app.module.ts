@@ -22,6 +22,7 @@ import { CallbackPipe } from "./pipes/CallbackPipe";
 import { HomeComponent } from "./screens/home/home.component";
 import { InitialComponent } from "./screens/initial/initial.component";
 import { CheckInDatesComponent } from "./components/check-in-dates/check-in-dates.component";
+import { CitiesListComponent } from './components/cities-list/cities-list.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { CheckInDatesComponent } from "./components/check-in-dates/check-in-date
     InitialComponent,
     CitySelectComponent,
     CheckInDatesComponent,
+    CitiesListComponent,
   ],
   imports: [
     BrowserModule,

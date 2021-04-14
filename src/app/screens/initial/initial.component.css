@@ -8,11 +8,6 @@
   padding-bottom: 5%;
 }
 
-.next-trip-title {
-  font-weight: 600;
-  font-size: 24px;
-}
-
 .next-trip-subtitle {
   color: var(--darker-gray);
 }
@@ -30,4 +25,8 @@
   -moz-box-shadow: none;
   -moz-transition: none;
   -webkit-transition: none;
+}
+
+.cities-list-container {
+  padding-top: 2%;
 }

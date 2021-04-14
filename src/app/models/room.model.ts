@@ -22,4 +22,6 @@ export class Room {
     details: RoomDetails;
     city: City;
     photos: Photo[];
+    checkInAvailable: Date;
+    checkOutAvailable: Date;
 }
