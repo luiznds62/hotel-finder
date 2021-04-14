@@ -30,3 +30,13 @@
 .cities-list-container {
   padding-top: 2%;
 }
+
+@media (max-width: 600px) {
+  .city-select-initial-container {
+    padding-bottom: 2%;
+  }
+
+  .check-in-dates-initial-container {
+    padding-bottom: 2%;
+  }
+}

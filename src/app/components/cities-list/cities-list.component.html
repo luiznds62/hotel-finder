@@ -7,7 +7,7 @@
   <div class="cities-list-items">
     <ul class="list-unstyled cities-list">
       <li class="cities-list-item" *ngFor="let city of cities" (click)="navigateToRooms(city)">
-        <div class="card city-card shadow-sm" style="width: 18rem">
+        <div class="card city-card shadow-sm">
           <img
             class="card-img-top"
             src="{{ city.imageSrc }}"

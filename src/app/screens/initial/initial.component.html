@@ -6,10 +6,10 @@
       Encontre nossos quartos e hóteis por todo Brasil!
     </span>
     <div class="row next-trip-search">
-      <div class="col-md-4">
+      <div class="col-md-4 city-select-initial-container">
         <app-city-select (onCityPicked)="getCity($event)"></app-city-select>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 check-in-dates-initial-container">
         <app-check-in-dates
           (onInitialDatePicked)="getInitialDate($event)"
           (onFinalDatePicked)="getFinalDate($event)"
