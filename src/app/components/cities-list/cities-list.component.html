@@ -19,10 +19,16 @@
             alt="Foto da cidade"
           />
           <div class="card-body-city">
+            <div class="card-body-city-ratings">
+              <div class="card-body-city-ratings-stars-evaluations">
+                <app-stars-rating [stars]="city.averages.averageStars"></app-stars-rating>
+                <span class="sub-heading-sub-title">({{city.averages.averageEvaluations}})</span>
+              </div>
+            </div>
             <span class="sub-heading-title">{{ city.name }}</span>
             <span class="sub-heading-sub-title">{{ city.state }}</span>
             <span class="sub-heading-sub-title text-bold mt-1">
-              {{ city.averagePrice | currency: "BRL" }} em média
+              {{ city.averages.averagePrice | currency: "BRL" }} em média
             </span>
           </div>
         </div>

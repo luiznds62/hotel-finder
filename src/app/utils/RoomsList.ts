@@ -1,17 +1,18 @@
-import { RoomType } from "../models/room.model";
+import { Room, RoomType } from "../models/room.model";
 import * as moment from "moment";
 
-export const roomsList = [
+export const roomsList: Room[] = [
   {
     name: "Hotel Ibis Budget",
     type: RoomType.HOTEL,
-    price: 123,
-    promotionalPrice: 111,
+    price: 308,
+    promotionalPrice: 300,
     rating: 8.1,
     stars: 4,
     isPopular: true,
-    checkInAvailable: moment("2021-04-01"),
-    checkOutAvailable: moment("2021-04-30"),
+    checkInAvailable: moment("2021-04-01") as any,
+    checkOutAvailable: moment("2021-04-30") as any,
+    evaluations: 28,
     details: {
       haveWiFi: true,
       haveFreeBreakfast: true,
@@ -34,13 +35,14 @@ export const roomsList = [
   {
     name: "Hotel Ibis Budget",
     type: RoomType.HOTEL,
-    price: 123,
-    promotionalPrice: 111,
+    price: 602,
+    promotionalPrice: 589,
     rating: 7.2,
     stars: 4,
     isPopular: true,
-    checkInAvailable: moment("2021-02-01"),
-    checkOutAvailable: moment("2021-06-30"),
+    checkInAvailable: moment("2021-02-01") as any,
+    checkOutAvailable: moment("2021-06-30") as any,
+    evaluations: 23,
     details: {
       haveWiFi: true,
       haveFreeBreakfast: false,
@@ -50,7 +52,7 @@ export const roomsList = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "Blumenau",
+      name: "Balneário Camboriú",
       state: "Santa Catarina",
     },
     photos: [
@@ -64,13 +66,14 @@ export const roomsList = [
   {
     name: "Hotel Ibis Budget",
     type: RoomType.HOTEL,
-    price: 123,
-    promotionalPrice: 111,
+    price: 335,
+    promotionalPrice: 225,
     rating: 4.4,
     stars: 4,
     isPopular: true,
-    checkInAvailable: moment("2021-04-01"),
-    checkOutAvailable: moment("2021-04-30"),
+    checkInAvailable: moment("2021-04-01") as any,
+    checkOutAvailable: moment("2021-04-30") as any,
+    evaluations: 19,
     details: {
       haveWiFi: true,
       haveFreeBreakfast: false,
@@ -80,8 +83,8 @@ export const roomsList = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "Blumenau",
-      state: "Santa Catarina",
+      name: "São Paulo",
+      state: "São Paulo",
     },
     photos: [
       {
@@ -94,13 +97,14 @@ export const roomsList = [
   {
     name: "Hotel Ibis Budget",
     type: RoomType.HOTEL,
-    price: 123,
+    price: 247,
     promotionalPrice: 111,
     rating: 1.3,
     stars: 4,
     isPopular: true,
-    checkInAvailable: moment("2021-06-01"),
-    checkOutAvailable: moment("2021-08-30"),
+    checkInAvailable: moment("2021-06-01") as any,
+    checkOutAvailable: moment("2021-08-30") as any,
+    evaluations: 16,
     details: {
       haveWiFi: true,
       haveFreeBreakfast: false,
@@ -110,8 +114,8 @@ export const roomsList = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "Blumenau",
-      state: "Santa Catarina",
+      name: "Salvador",
+      state: "Bahia",
     },
     photos: [
       {

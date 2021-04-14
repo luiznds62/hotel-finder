@@ -23,22 +23,27 @@ export class CitiesListComponent implements OnInit {
         (room) => room.city.name === city.name
       );
 
-      (<any>city).averagePrice = this.getAveragePriceFromCity(roomsFromCity);
+      (<any>city).averages = this.getAverages(roomsFromCity);
     });
   }
 
-  getAveragePriceFromCity(roomsFromCity: Room[]): Number {
+  getAverages(roomsFromCity: Room[]): any {
+    const roomsLength =  roomsFromCity.length;
     let pricesSum = 0;
-    let averagePrice = 0;
+    let starsSum = 0;
+    let evaluationsSum = 0;
+
     roomsFromCity.forEach(function (room) {
       pricesSum = room.price + pricesSum;
+      starsSum = room.stars + starsSum;
+      evaluationsSum = room.evaluations + evaluationsSum;
     });
 
-    if (pricesSum > 0) {
-      averagePrice = pricesSum / roomsFromCity.length;
-    }
-
-    return averagePrice;
+    return {
+      averagePrice: pricesSum > 0 && pricesSum / roomsLength,
+      averageStars: starsSum > 0 && starsSum / roomsLength,
+      averageEvaluations: evaluationsSum > 0 && evaluationsSum / roomsLength
+    };
   }
 
   navigateToRooms(city: City) {

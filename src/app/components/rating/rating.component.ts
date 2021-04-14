@@ -8,6 +8,7 @@ import { RatingEvaluation } from "../../models/rating-evaluation.model";
 })
 export class RatingComponent implements OnInit {
   @Input() rating: number;
+  @Input() showDescription: boolean = false;
 
   ratingClass: Object = { "rating-excelent": true };
   description: string = "Excelente";

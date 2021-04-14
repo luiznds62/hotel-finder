@@ -144,8 +144,12 @@ p {
   border-color: var(--primary);
 }
 
-.text-white {
+.text-primary {
   color: var(--primary);
+}
+
+.text-white {
+  color: var(--white);
 }
 
 .text-gray {
@@ -158,6 +162,10 @@ p {
 
 .text-bold{
   font-weight: 900;
+}
+
+.w-75 {
+  width: 75%;
 }
 
 .w-50 {

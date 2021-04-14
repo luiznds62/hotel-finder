@@ -19,6 +19,7 @@ export class Room {
     isPopular: boolean;
     rating: number;
     stars: number;
+    evaluations: number;
     details: RoomDetails;
     city: City;
     photos: Photo[];
