@@ -160,8 +160,12 @@ p {
   padding-left: 0;
 }
 
-.text-bold{
+.text-bold {
   font-weight: 900;
+}
+
+.border-radius-0 {
+  border-radius: 0!important;
 }
 
 .w-75 {
@@ -170,4 +174,8 @@ p {
 
 .w-50 {
   width: 50%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

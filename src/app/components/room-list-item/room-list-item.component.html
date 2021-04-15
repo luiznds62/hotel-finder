@@ -1,4 +1,39 @@
-<div class="card room-list-item shadow-sm">
+<div class="card border-0 shadow mb-4 border-radius-0 card-container cursor-pointer">
+  <div class="image-container">
+    <img
+      class="card-img-top card-image-room border-radius-0"
+      src="{{ room.photos[0].src }}"
+      alt="Imagem principal da acomodação"
+    />
+  </div>
+  <div class="card-body card-body-room cursor-pointer">
+    <div class="stars-container">
+        <app-stars-rating [stars]="room.stars"></app-stars-rating>
+        <span class="sub-heading-sub-title">({{room.evaluations}})</span>
+    </div>
+    <div class="identification-container">
+      <span class="sub-heading-title">{{ room.name }}</span>
+      <span class="sub-heading-sub-title">{{ room.location }}</span>
+    </div>
+    <div class="price-container">
+      <span
+        [ngClass]="{
+          'card-room-list-item-room-price-out': room.promotionalPrice !== 0
+        }"
+      >
+        {{ room.price | currency: "BRL" }} por noite
+      </span>
+      <span *ngIf="room.promotionalPrice !== 0">
+        {{ room.promotionalPrice | currency: "BRL" }} por noite
+      </span>
+    </div>
+  </div>
+  <div class="ratings-container">
+    <app-rating [rating]="room.rating" [showDescription]="true"></app-rating>
+  </div>
+</div>
+
+<!-- <div class="card room-list-item shadow-sm">
   <img class="room-list-item-image" src="{{ room.photos[0].src }}" />
   <div class="card-room-list-item-content">
     <div class="row">
@@ -70,4 +105,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

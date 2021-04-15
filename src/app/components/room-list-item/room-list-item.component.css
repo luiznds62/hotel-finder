@@ -1,4 +1,57 @@
-.room-list-item {
+.image-container {
+  height: 250px;
+  width: 300px;
+}
+
+.card-image-room {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.stars-container {
+  margin-top: 2%;
+  padding-left: 2%;
+}
+
+.ratings-container {
+  padding-left: 6%;
+  padding-bottom: 6%;
+}
+
+.identification-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+  margin-top: 2%;
+}
+
+.price-container {
+  padding-left: 2%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.action-conteiner {
+  padding-left: 2%;
+  margin-top: 2%;
+}
+
+.card-room-list-item-room-price-out {
+  color: var(--darker-gray);
+  text-decoration: line-through;
+}
+
+.card-body-room {
+  height: 175px;
+}
+
+@media (max-width: 600px) {
+  .image-container {
+    width: 100%;
+  }
+}
+/* .room-list-item {
   display: flex;
   flex-direction: row;
   margin-bottom: 1%;
@@ -137,4 +190,4 @@
   .card-room-list-item-content {
     margin-left: 10%;
   }
-}
+} */

@@ -9,7 +9,6 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { LogoComponent } from "./components/logo/logo.component";
 import { RoomsListComponent } from "./components/rooms-list/rooms-list.component";
-import { RoomsFilterComponent } from "./components/rooms-filter/rooms-filter.component";
 import { RoomsSorterComponent } from "./components/rooms-sorter/rooms-sorter.component";
 import { RoomComponent } from "./components/room/room.component";
 import { RoomListItemComponent } from "./components/room-list-item/room-list-item.component";
@@ -32,7 +31,6 @@ import { CitiesListComponent } from './components/cities-list/cities-list.compon
     FooterComponent,
     LogoComponent,
     RoomsListComponent,
-    RoomsFilterComponent,
     RoomsSorterComponent,
     RoomComponent,
     RoomListItemComponent,

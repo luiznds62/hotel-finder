@@ -1,27 +1,48 @@
-<ul class="list-unstyled" *ngIf="rooms.length > 0">
-  <li
-    *ngFor="
-      let room of rooms
-        | callback: filterByName
-        | paginate
-          : {
-              itemsPerPage: 4,
-              currentPage: currentPage,
-              totalItems: rooms.length
-            }
-    "
-  >
-    <app-room-list-item [room]="room"></app-room-list-item>
-  </li>
-</ul>
-<pagination-controls
-  *ngIf="rooms.length !== 0"
-  class="pagination-control"
-  (pageChange)="pageChanged($event)"
-  directionLinks="false"
-></pagination-controls>
-<div class="not-found" *ngIf="rooms.length === 0">
-  <p class="text-center">
-    Oops, infelizmente não encontramos nenhuma acomodação...
-  </p>
+<div class="room-list-component-container">
+  <div class="room-list-meta-container">
+    <span
+      ><span class="text-bold">{{ rooms.length }} acomodações</span>
+      encontradas</span
+    >
+    <div class="room-list-meta-container-sort">
+      <span class="sub-heading-sub-title w-50 mr-3">Ordenar por:</span>
+      <select class="form-select select-sort-rooms shadow-sm" aria-label="Ordenação">
+        <option value="relevant" selected>Relevância</option>
+        <option value="majorPrice">Maior preço</option>
+        <option value="minorPrice">Menor preço</option>
+      </select>
+    </div>
+  </div>
+  <div class="room-list-container">
+    <ul
+      class="list-unstyled rooms-list-items-container"
+      *ngIf="rooms.length > 0"
+    >
+      <li
+        *ngFor="
+          let room of rooms
+            | callback: filterByName
+            | paginate
+              : {
+                  itemsPerPage: 8,
+                  currentPage: currentPage,
+                  totalItems: rooms.length
+                }
+        "
+      >
+        <app-room-list-item [room]="room"></app-room-list-item>
+      </li>
+    </ul>
+    <pagination-controls
+      *ngIf="rooms.length !== 0 && rooms.length > 8"
+      class="pagination-control"
+      (pageChange)="pageChanged($event)"
+      directionLinks="false"
+    ></pagination-controls>
+    <div class="not-found" *ngIf="rooms.length === 0">
+      <p class="text-center">
+        Oops, infelizmente não encontramos nenhuma acomodação...
+      </p>
+    </div>
+  </div>
 </div>
