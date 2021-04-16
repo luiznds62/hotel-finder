@@ -41,8 +41,8 @@ export class CitiesListComponent implements OnInit {
 
     return {
       averagePrice: pricesSum > 0 && pricesSum / roomsLength,
-      averageStars: starsSum > 0 && starsSum / roomsLength,
-      averageEvaluations: evaluationsSum > 0 && evaluationsSum / roomsLength
+      averageStars: starsSum > 0 && Math.ceil(starsSum / roomsLength),
+      averageEvaluations: evaluationsSum > 0 && Math.ceil(evaluationsSum / roomsLength)
     };
   }
 

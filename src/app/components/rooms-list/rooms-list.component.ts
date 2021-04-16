@@ -1,25 +1,33 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { Room, RoomType } from "../../models/room.model";
+import { Component, Input, OnInit } from '@angular/core';
+import { Room } from '../../models/room.model';
+import { SortService } from '../../service/SortService';
+import { SORT_FIELDS } from '../../utils/SortFields';
 
 @Component({
-  selector: "app-rooms-list",
-  templateUrl: "./rooms-list.component.html",
-  styleUrls: ["./rooms-list.component.css"],
+    selector: 'app-rooms-list',
+    templateUrl: './rooms-list.component.html',
+    styleUrls: ['./rooms-list.component.css'],
 })
 export class RoomsListComponent implements OnInit {
-  @Input() rooms: Room[];
+    sortService: SortService;
+    @Input() rooms: Room[];
 
-  currentPage: number = 1;
+    currentPage: number = 1;
+    sortAttributes: any = SORT_FIELDS;
+    sortBy: string = this.sortAttributes.RELEVANCY.value;
 
-  constructor() {}
+    constructor() {
+        this.sortService = new SortService();
+    }
 
-  ngOnInit() {}
+    ngOnInit() {}
 
-  filterByName(room: Room) {
-    return true;
-  }
+    onChangeOrderBy() {
+        const rooms = this.sortService.sort(this.rooms, this.sortBy);
+        this.rooms = rooms;
+    }
 
-  pageChanged(event) {
-    this.currentPage = event;
-  }
+    pageChanged(event) {
+        this.currentPage = event;
+    }
 }

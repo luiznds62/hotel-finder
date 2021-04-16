@@ -1,9 +1,9 @@
-import { City } from "./city.model";
-import { RoomDetails } from "./room-details.model";
+import { City } from './city.model';
+import { RoomDetails } from './room-details.model';
 
 export enum RoomType {
     ROOM = 'Room',
-    HOTEL = 'Hotel'
+    HOTEL = 'Hotel',
 }
 
 export interface Photo {
@@ -19,6 +19,7 @@ export class Room {
     isPopular: boolean;
     rating: number;
     stars: number;
+    relevancy?: number;
     evaluations: number;
     details: RoomDetails;
     city: City;

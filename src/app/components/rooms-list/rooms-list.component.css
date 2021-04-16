@@ -1,46 +1,56 @@
 .room-list-meta-container {
-  margin-bottom: 1%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .room-list-meta-container-sort {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25%;
 }
 
 .not-found {
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .room-list-container {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
 }
 
 .rooms-list-items-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .select-sort-rooms {
-  border-width: 0.5px;
-  font-size: 14px;
+    border-width: 0.5px;
+    font-size: 14px;
+    background-color: var(--white);
 }
 
 pagination-controls {
-  align-self: flex-end;
+    align-self: flex-end;
 }
 
 .pagination-control /deep/ .ngx-pagination .current {
-  background: var(--primary) !important;
-  border-radius: 6px;
+    background: var(--primary) !important;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .image-container {
+        width: 100%;
+    }
+    .room-list-meta-container-sort {
+        width: 100%;
+    }
 }
