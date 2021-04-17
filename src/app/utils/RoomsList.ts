@@ -34,7 +34,7 @@ export const roomsList: Room[] = [
       {
         main: false,
         src:
-          "assets/room-pattern-1/secondary.jpg",
+          "assets/room-pattern-1/second.jpg",
       },
       {
         main: false,
@@ -222,7 +222,7 @@ export const roomsList: Room[] = [
       {
         main: false,
         src:
-          "assets/room-pattern-1/secondary.jpg",
+          "assets/room-pattern-1/second.jpg",
       },
       {
         main: false,
@@ -251,7 +251,7 @@ export const roomsList: Room[] = [
     details: {
       haveWiFi: true,
       haveFreeBreakfast: false,
-      haveFreeCancelation: true,
+      haveFreeCancelation: false,
       isInCenter: false,
       distanceToCenterKM: 0.6,
       isTakingSafetyMeasures: true,
@@ -269,7 +269,7 @@ export const roomsList: Room[] = [
       {
         main: false,
         src:
-          "assets/room-pattern-2/secondary.jpg",
+          "assets/room-pattern-2/second.jpg",
       },
       {
         main: false,
@@ -316,7 +316,7 @@ export const roomsList: Room[] = [
       {
         main: false,
         src:
-          "assets/room-pattern-2/secondary.jpg",
+          "assets/room-pattern-2/second.jpg",
       },
       {
         main: false,
@@ -358,12 +358,12 @@ export const roomsList: Room[] = [
       {
         main: true,
         src:
-          "assets/room-pattern-2/primary.jpg",
+          "assets/room-pattern-2/third.jpg",
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/secondary.jpg",
+          "assets/room-pattern-2/second.jpg",
       },
       {
         main: false,

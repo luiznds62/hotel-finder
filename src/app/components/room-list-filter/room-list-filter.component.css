@@ -1,0 +1,9 @@
+.room-list-filter-container {
+    margin-right: 6%;
+    height: 100%
+}
+
+.filter-row {
+    display: flex;
+    justify-content: space-between;
+}

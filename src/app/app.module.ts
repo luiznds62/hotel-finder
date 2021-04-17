@@ -21,6 +21,7 @@ import { CheckInDatesComponent } from './components/check-in-dates/check-in-date
 import { CitiesListComponent } from './components/cities-list/cities-list.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 import { CallbackPipe } from './pipes/CallbackPipe';
+import { RoomListFilterComponent } from './components/room-list-filter/room-list-filter.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -39,7 +40,8 @@ import { CallbackPipe } from './pipes/CallbackPipe';
         CitySelectComponent,
         CheckInDatesComponent,
         CitiesListComponent,
-        LoadingSpinnerComponent
+        LoadingSpinnerComponent,
+        RoomListFilterComponent
     ],
     imports: [BrowserModule, AppRoutingModule, FormsModule, NgxPaginationModule],
     providers: [],

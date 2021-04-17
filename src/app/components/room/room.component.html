@@ -1,6 +1,7 @@
-<div class="room-container pt-3">
-  <div class="container">
-    <app-rooms-list *ngIf="!loading" [rooms]="rooms"></app-rooms-list>
+<div class="room-container">
+    <div class="list-and-filter-container">
+        <app-room-list-filter></app-room-list-filter>
+        <app-rooms-list *ngIf="!loading" [rooms]="rooms"></app-rooms-list>
+    </div>
     <app-loading-spinner *ngIf="loading"></app-loading-spinner>
-  </div>
 </div>

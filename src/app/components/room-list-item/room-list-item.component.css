@@ -1,4 +1,4 @@
-.image-container {
+/* .image-container {
   height: 250px;
   width: 300px;
 }
@@ -50,144 +50,160 @@
   .image-container {
     width: 100%;
   }
-}
-/* .room-list-item {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1%;
-  border: 0;
-}
-
-.room-list-item:hover {
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(166, 173, 201, 0.2);
-}
-
-.room-list-item-image {
-  height: 100% !important;
-  width: 40%;
+} */
+.room-list-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    border: 0;
 }
 
 .card-room-list-item-content {
-  width: 100%;
-  padding-top: 1%;
-  padding-left: 2%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .card-room-list-item-title {
-  font-size: 20px;
-  font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .card-room-list-item-room-type {
-  margin-left: 4%;
+    margin-left: 4%;
 }
 
 .card-room-list-item-room-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .popular-badge {
-  margin-left: 6%;
-  font-size: 12px;
-  padding-left: 4%;
-  padding-right: 4%;
-  background-color: var(--dark-gray);
-  color: var(--white);
+    margin-left: 6%;
+    font-size: 12px;
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: var(--dark-gray);
+    color: var(--white);
 }
 
 .card-room-list-item-room-prices {
-  padding-top: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .card-room-list-item-room-price {
-  font-size: 26px;
-  font-weight: 900;
+    font-size: 26px;
+    font-weight: 900;
 }
 
 .card-room-list-item-room-price-out {
-  font-size: 24px;
-  font-weight: 400;
-  color: var(--darker-gray);
-  text-decoration: line-through;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--darker-gray);
+    text-decoration: line-through;
 }
 
 .card-room-list-item-room-promotional-price {
-  font-size: 26px;
-  font-weight: 900;
-  padding-top: 2%;
+    font-size: 26px;
+    font-weight: 900;
+    padding-top: 2%;
 }
 
 .card-room-list-item-room-actions {
-  padding-top: 10%;
-  justify-content: center;
-  align-items: center;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-details {
-  background-color: var(--primary);
-  color: var(--white);
-  width: 80%;
+    background-color: var(--primary);
+    color: var(--white);
+    width: 100%;
+}
+
+.btn-details:hover {
+    background-color: #6cb5f5;
 }
 
 .card-room-list-item-room-free-cancelation {
-  padding-top: 4%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .free-cancelation-text {
-  margin-left: 2%;
-  font-weight: bold;
-  font-size: 14px;
+    margin-left: 2%;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .card-room-list-item-aditional {
-  padding-top: 14%;
+    padding-top: 14%;
 }
 
 .card-room-list-item-is-center {
-  align-items: center;
+    align-items: center;
 }
 
 .icon-detail {
-  padding-right: 4%;
-  color: var(--dark-gray);
+    padding-right: 4%;
+    color: var(--dark-gray);
 }
 
 .detail-text {
-  font-size: 12px;
-  color: var(--darker-gray);
+    font-size: 12px;
+    color: var(--darker-gray);
 }
 
 .detail-divider {
-  width: 80%;
-  align-self: center;
+    align-self: center;
 }
 
 .card-room-list-item-evaluations {
-  padding-top: 10%;
+    margin-top: 10%;
 }
 
-@media (max-width: 600px) {
-  .room-list-item {
-    margin-bottom: 6%;
-    padding-top: 6%;
-    padding-bottom: 6%;
-  }
+@media (max-width: 767px) {
+    .room-list-item {
+        margin-bottom: 10%;
+    }
 
-  .room-list-item-image {
-    display: none;
-  }
+    .card-room-list-item-content {
+        justify-content: center;
+    }
 
-  .card-room-list-item-content {
-    margin-left: 10%;
-  }
-} */
+    .card-room-list-item-room-header {
+        justify-content: center;
+    }
+
+    .card-room-list-item-title {
+        text-align: center !important;
+    }
+
+    .room-image-xs {
+        display: block !important;
+        max-width: 100%;
+        height: 250px;
+    }
+}
+@media (min-width: 768px) {
+    .room-image {
+        max-width: 150px;
+    }
+}
+@media (min-width: 992px) {
+    .room-image {
+        max-width: 275px;
+    }
+}
+@media (min-width: 1550px) {
+    .room-image {
+        max-width: 450px;
+    }
+}

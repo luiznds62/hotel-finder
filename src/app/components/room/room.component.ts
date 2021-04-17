@@ -12,7 +12,7 @@ import { SORT_FIELDS } from '../../utils/SortFields';
 })
 export class RoomComponent implements OnInit {
     sortService: SortService;
-    DEBOUNCE_TIME: number = 2800;
+    DEBOUNCE_TIME: number = 200;
     rooms: Room[];
     filters: any;
     loading: boolean = false;

@@ -1,4 +1,4 @@
-<div class="card border-0 shadow mb-4 border-radius-0 card-container cursor-pointer">
+<!-- <div class="card border-0 shadow mb-4 border-radius-0 card-container cursor-pointer">
   <div class="image-container">
     <img
       class="card-img-top card-image-room border-radius-0"
@@ -31,13 +31,14 @@
   <div class="ratings-container">
     <app-rating [rating]="room.rating" [showDescription]="true"></app-rating>
   </div>
-</div>
+</div> -->
 
-<!-- <div class="card room-list-item shadow-sm">
-  <img class="room-list-item-image" src="{{ room.photos[0].src }}" />
+<div class="card room-list-item shadow">
+  <img class="room-image-xs d-none" src="{{ room.photos[0].src }}" />
   <div class="card-room-list-item-content">
-    <div class="row">
-      <div class="col-md-6">
+    <img class="room-image img-fluid d-none d-md-block" src="{{ room.photos[0].src }}" />
+    <div class="row p-4 w-100">
+      <div class="col-lg-6">
         <div class="card-room-list-item-title">{{ room.name }}</div>
         <div class="card-room-list-item-room-header">
           <app-stars-rating [stars]="room.stars"></app-stars-rating>
@@ -71,7 +72,7 @@
           <span class="free-cancelation-text">Cancelamento gratuito</span>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-6 d-none d-lg-block">
         <div class="card-room-list-item-aditional">
           <div class="card-room-list-item-is-center">
             <i class="fas fa-map-marker-alt icon-detail"></i>
@@ -105,4 +106,4 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
