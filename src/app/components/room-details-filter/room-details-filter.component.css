@@ -1,0 +1,19 @@
+.room-detail-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkboxes-container {
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+
+.check-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.quantity {
+    font-size: 12px;
+}

@@ -1,9 +1,11 @@
 <div class="room-list-filter-container pt-3 d-none d-md-block">
     <div class="row">
       <div class="col">
-        <div class="card">
+        <div class="card border-0 shadow">
           <div class="card-body">
-            testetestetestetestetestetesteteste
+            <app-price-filter [rooms]="rooms"></app-price-filter>
+            <hr class="filter-divider"/>
+            <app-room-details-filter [rooms]="rooms"></app-room-details-filter>
           </div>
         </div>
       </div>

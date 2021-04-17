@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Room } from '../../models/room.model';
 
 @Component({
   selector: 'app-room-list-filter',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./room-list-filter.component.css']
 })
 export class RoomListFilterComponent implements OnInit {
+
+  @Input() rooms: Room; 
 
   constructor() { }
 

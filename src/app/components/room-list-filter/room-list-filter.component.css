@@ -1,9 +1,10 @@
 .room-list-filter-container {
-    margin-right: 6%;
-    height: 100%
+    padding-right: 6%;
+    height: 100%;
+    max-width: 400px;
+    min-width: 350px;
 }
 
-.filter-row {
-    display: flex;
-    justify-content: space-between;
+.filter-divider {
+    color: var(--light-gray);
 }

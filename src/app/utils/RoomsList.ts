@@ -1,6 +1,8 @@
 import { Room, RoomType } from "../models/room.model";
 import * as moment from "moment";
 
+export const DEBOUNCE_ROOM_TIME: number = 100;
+
 export const roomsList: Room[] = [
   {
     name: "Amazing Flat",
@@ -18,6 +20,9 @@ export const roomsList: Room[] = [
       haveWiFi: true,
       haveFreeBreakfast: true,
       haveFreeCancelation: true,
+      haveFreeParkingSpace: true,
+      haveRestaurant: false,
+      haveTv: true,
       isInCenter: true,
       isTakingSafetyMeasures: true,
     },
@@ -65,6 +70,9 @@ export const roomsList: Room[] = [
       haveFreeBreakfast: false,
       haveFreeCancelation: true,
       isInCenter: false,
+      haveFreeParkingSpace: false,
+      haveRestaurant: false,
+      haveTv: false,
       distanceToCenterKM: 0.6,
       isTakingSafetyMeasures: true,
     },
@@ -112,6 +120,9 @@ export const roomsList: Room[] = [
       haveFreeBreakfast: false,
       haveFreeCancelation: true,
       isInCenter: false,
+      haveFreeParkingSpace: true,
+      haveRestaurant: true,
+      haveTv: true,
       distanceToCenterKM: 0.6,
       isTakingSafetyMeasures: true,
     },
@@ -157,6 +168,9 @@ export const roomsList: Room[] = [
     details: {
       haveWiFi: true,
       haveFreeBreakfast: false,
+      haveFreeParkingSpace: false,
+      haveRestaurant: false,
+      haveTv: false,
       haveFreeCancelation: true,
       isInCenter: false,
       distanceToCenterKM: 0.6,
@@ -207,6 +221,9 @@ export const roomsList: Room[] = [
       haveFreeCancelation: true,
       isInCenter: false,
       distanceToCenterKM: 0.6,
+      haveFreeParkingSpace: true,
+      haveRestaurant: true,
+      haveTv: true,
       isTakingSafetyMeasures: true,
     },
     city: {
@@ -252,6 +269,9 @@ export const roomsList: Room[] = [
       haveWiFi: true,
       haveFreeBreakfast: false,
       haveFreeCancelation: false,
+      haveFreeParkingSpace: true,
+      haveRestaurant: false,
+      haveTv: true,
       isInCenter: false,
       distanceToCenterKM: 0.6,
       isTakingSafetyMeasures: true,
@@ -299,6 +319,9 @@ export const roomsList: Room[] = [
       haveWiFi: true,
       haveFreeBreakfast: false,
       haveFreeCancelation: true,
+      haveFreeParkingSpace: true,
+      haveRestaurant: false,
+      haveTv: true,
       isInCenter: false,
       distanceToCenterKM: 0.6,
       isTakingSafetyMeasures: true,
@@ -346,6 +369,9 @@ export const roomsList: Room[] = [
       haveWiFi: true,
       haveFreeBreakfast: false,
       haveFreeCancelation: true,
+      haveFreeParkingSpace: true,
+      haveRestaurant: true,
+      haveTv: false,
       isInCenter: false,
       distanceToCenterKM: 0.6,
       isTakingSafetyMeasures: true,

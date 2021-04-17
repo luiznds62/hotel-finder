@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap");
+@import "~nouislider/distribute/nouislider.min.css";
 
 :root {
   --primary: #2d97f4;
@@ -178,4 +179,18 @@ p {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.filter-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.handlers {
+  border: 1px solid var(--dark-gray)!important;
+}
+
+.noUi-connect{
+  background: var(--primary)!important;
 }

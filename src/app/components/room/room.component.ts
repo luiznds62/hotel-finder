@@ -1,7 +1,7 @@
 import { FilterService } from '../../service/FilterService';
 import { Component, OnInit } from '@angular/core';
 import { Room } from '../../models/room.model';
-import { roomsList } from '../../utils/RoomsList';
+import { DEBOUNCE_ROOM_TIME, roomsList } from '../../utils/RoomsList';
 import { ActivatedRoute } from '@angular/router';
 import { SortService } from '../../service/SortService';
 import { SORT_FIELDS } from '../../utils/SortFields';
@@ -12,7 +12,6 @@ import { SORT_FIELDS } from '../../utils/SortFields';
 })
 export class RoomComponent implements OnInit {
     sortService: SortService;
-    DEBOUNCE_TIME: number = 200;
     rooms: Room[];
     filters: any;
     loading: boolean = false;
@@ -51,6 +50,6 @@ export class RoomComponent implements OnInit {
                 this.onLoadPage
             );
             this.loading = false;
-        }, this.DEBOUNCE_TIME);
+        }, DEBOUNCE_ROOM_TIME);
     }
 }

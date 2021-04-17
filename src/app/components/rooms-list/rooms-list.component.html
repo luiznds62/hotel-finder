@@ -1,4 +1,4 @@
-<div class="room-list-component-container pt-3">
+<div *ngIf="!loading" class="pt-3">
     <div class="room-list-meta-container">
         <span>
             <span class="text-bold">
@@ -55,3 +55,4 @@
         </div>
     </div>
 </div>
+<app-loading-spinner *ngIf="loading"></app-loading-spinner>

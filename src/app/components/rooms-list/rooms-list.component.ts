@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Room } from '../../models/room.model';
+import { FilterService } from '../../service/FilterService';
 import { SortService } from '../../service/SortService';
+import { DEBOUNCE_ROOM_TIME } from '../../utils/RoomsList';
 import { SORT_FIELDS } from '../../utils/SortFields';
 
 @Component({
@@ -15,6 +17,7 @@ export class RoomsListComponent implements OnInit {
     currentPage: number = 1;
     sortAttributes: any = SORT_FIELDS;
     sortBy: string = this.sortAttributes.RELEVANCY.value;
+    loading: boolean = false;
 
     constructor() {
         this.sortService = new SortService();
@@ -23,11 +26,18 @@ export class RoomsListComponent implements OnInit {
     ngOnInit() {}
 
     onChangeOrderBy() {
-        const rooms = this.sortService.sort(this.rooms, this.sortBy);
-        this.rooms = rooms;
+        this.setRoomsWithDebounce();
     }
 
     pageChanged(event) {
         this.currentPage = event;
+    }
+
+    setRoomsWithDebounce() {
+        this.loading = true;
+        setTimeout(() => {
+            this.rooms = this.sortService.sort(this.rooms, this.sortBy);
+            this.loading = false;
+        }, DEBOUNCE_ROOM_TIME);
     }
 }
