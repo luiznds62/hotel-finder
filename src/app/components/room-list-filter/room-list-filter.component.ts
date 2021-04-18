@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Room } from '../../models/room.model';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Room} from '../../models/room.model';
 
 @Component({
   selector: 'app-room-list-filter',
@@ -8,11 +8,17 @@ import { Room } from '../../models/room.model';
 })
 export class RoomListFilterComponent implements OnInit {
 
-  @Input() rooms: Room; 
+  @Input() rooms: Room[];
+  @Output() filterAplied = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  collectionWasFiltered(event) {
+    this.filterAplied.emit(event);
   }
 
 }

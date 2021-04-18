@@ -1,25 +1,28 @@
-import { EventEmitter, Component, OnInit, Output } from "@angular/core";
+import {EventEmitter, Component, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: "app-check-in-dates",
-  templateUrl: "./check-in-dates.component.html",
-  styleUrls: ["./check-in-dates.component.css"],
+  selector: 'app-check-in-dates',
+  templateUrl: './check-in-dates.component.html',
+  styleUrls: ['./check-in-dates.component.css'],
 })
 export class CheckInDatesComponent implements OnInit {
-  constructor() {}
-  @Output() onInitialDatePicked = new EventEmitter();
-  @Output() onFinalDatePicked = new EventEmitter();
+  constructor() {
+  }
+
+  @Output() initialDatePicked = new EventEmitter();
+  @Output() finalDatePicked = new EventEmitter();
 
   initialDate: any;
   finalDate: any;
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   onChangeInitial(date) {
-    this.onInitialDatePicked.emit(date);
+    this.initialDatePicked.emit(date);
   }
 
   onChangeFinal(date) {
-    this.onFinalDatePicked.emit(date);
+    this.finalDatePicked.emit(date);
   }
 }

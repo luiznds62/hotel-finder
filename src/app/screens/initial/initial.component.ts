@@ -1,29 +1,31 @@
-import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: "app-initial",
-  templateUrl: "./initial.component.html",
-  styleUrls: ["./initial.component.css"],
+  selector: 'app-initial',
+  templateUrl: './initial.component.html',
+  styleUrls: ['./initial.component.css'],
 })
 export class InitialComponent implements OnInit {
   city: string;
   initialDate: Date;
   finalDate: Date;
 
-  constructor(private route: Router) {}
+  constructor(private route: Router) {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
-  public getCity(city: string): void {
+  public getCity(city: any): void {
     this.city = city;
   }
 
-  public getInitialDate(date: Date): void {
+  public getInitialDate(date: any): void {
     this.initialDate = date;
   }
 
-  public getFinalDate(date: Date): void {
+  public getFinalDate(date: any): void {
     this.finalDate = date;
   }
 
@@ -31,7 +33,7 @@ export class InitialComponent implements OnInit {
     const filters: any = {};
 
     if (this.city) {
-      filters["city.name"] = this.city;
+      filters['city.name'] = this.city;
     }
 
     if (this.initialDate) {
@@ -46,6 +48,6 @@ export class InitialComponent implements OnInit {
   }
 
   search() {
-    this.route.navigate(["./home", this.getFilters()]);
+    this.route.navigate(['./home', this.getFilters()]);
   }
 }

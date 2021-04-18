@@ -3,9 +3,11 @@
       <div class="col">
         <div class="card border-0 shadow">
           <div class="card-body">
-            <app-price-filter [rooms]="rooms"></app-price-filter>
+            <app-price-filter (priceChangedEmitter)="collectionWasFiltered($event)" [rooms]="rooms"></app-price-filter>
             <hr class="filter-divider"/>
             <app-room-details-filter [rooms]="rooms"></app-room-details-filter>
+            <hr class="filter-divider"/>
+            <app-room-features-filter [rooms]="rooms"></app-room-features-filter>
           </div>
         </div>
       </div>

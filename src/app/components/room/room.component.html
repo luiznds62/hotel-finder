@@ -1,6 +1,6 @@
 <div class="room-container">
     <div class="list-and-filter-container">
-        <app-room-list-filter *ngIf="!loading" [rooms]="rooms"></app-room-list-filter>
+        <app-room-list-filter (filterAplied)="collectionWasFiltered($event)" *ngIf="!loading" [rooms]="rooms"></app-room-list-filter>
         <app-rooms-list *ngIf="!loading" [rooms]="rooms" style="width:100%;"></app-rooms-list>
     </div>
     <app-loading-spinner *ngIf="loading"></app-loading-spinner>

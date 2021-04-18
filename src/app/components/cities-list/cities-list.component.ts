@@ -1,21 +1,22 @@
-import { City } from "./../../models/city.model";
-import { Component, OnInit } from "@angular/core";
-import { citiesList } from "../../utils/CitiesList";
-import { Router } from "@angular/router";
-import { roomsList } from "../../utils/RoomsList";
-import { Room } from "../../models/room.model";
+import {City} from './../../models/city.model';
+import {Component, OnInit} from '@angular/core';
+import {citiesList} from '../../utils/CitiesList';
+import {Router} from '@angular/router';
+import {roomsList} from '../../utils/RoomsList';
+import {Room} from '../../models/room.model';
 
 @Component({
-  selector: "app-cities-list",
-  templateUrl: "./cities-list.component.html",
-  styleUrls: ["./cities-list.component.css"],
+  selector: 'app-cities-list',
+  templateUrl: './cities-list.component.html',
+  styleUrls: ['./cities-list.component.css'],
 })
 export class CitiesListComponent implements OnInit {
   cities: City[] = citiesList;
   rooms: any = roomsList;
   citiesData: any = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
     this.cities.forEach((city) => {
@@ -28,7 +29,7 @@ export class CitiesListComponent implements OnInit {
   }
 
   getAverages(roomsFromCity: Room[]): any {
-    const roomsLength =  roomsFromCity.length;
+    const roomsLength = roomsFromCity.length;
     let pricesSum = 0;
     let starsSum = 0;
     let evaluationsSum = 0;
@@ -47,6 +48,6 @@ export class CitiesListComponent implements OnInit {
   }
 
   navigateToRooms(city: City) {
-    this.router.navigate(["./home", { "city.name": city.name }]);
+    this.router.navigate(['./home', {'city.name': city.name}]);
   }
 }
