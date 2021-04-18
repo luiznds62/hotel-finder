@@ -29,8 +29,8 @@
         <span class="text-gray quantity">{{roomsQuantityForDetails.haveRestaurant}}</span>
       </label>
     </div>
-    <div [(ngModel)]="haveTv" (ngModelChange)="onChanged('haveTv')" ngDefaultControl class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="haveTv">
+    <div class="form-check">
+      <input [(ngModel)]="haveTv" (ngModelChange)="onChanged('haveTv')" class="form-check-input" type="checkbox" value="" id="haveTv">
       <label class="form-check-label check-container" for="haveTv">
         <span class="text-gray">TV a cabo</span>
         <span class="text-gray quantity">{{roomsQuantityForDetails.haveTv}}</span>

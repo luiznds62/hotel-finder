@@ -1,12 +1,7 @@
 import {Room} from './../../models/room.model';
 import {Input, Output, EventEmitter} from '@angular/core';
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
 import * as noUiSlider from 'nouislider';
-import {FilterService} from '../../service/FilterService';
-import {SORT_FIELDS} from '../../utils/SortFields';
-import {SortService} from '../../service/SortService';
-import {roomsList} from '../../utils/RoomsList';
 
 @Component({
   selector: 'app-price-filter',
@@ -15,23 +10,18 @@ import {roomsList} from '../../utils/RoomsList';
 })
 export class PriceFilterComponent implements OnInit {
   @Input() rooms: Room[];
-  @Output() priceChangedEmitter = new EventEmitter();
+  @Output() filterChanged = new EventEmitter();
 
-  sortService: SortService;
   prices: Number[];
   minPrice: any = 0;
   maxPrice: any = 0;
-  paramMap: any;
 
-  constructor(private activatedRoute: ActivatedRoute) {
-    this.sortService = new SortService();
+  constructor() {
   }
 
   ngOnInit() {
-    let startValue = 0;
+    const startValue = 0;
     let finalValue;
-
-    this.paramMap = this.activatedRoute.snapshot.paramMap;
 
     this.prices = this.rooms.map((room: Room) => {
       if (room.promotionalPrice) {
@@ -43,11 +33,11 @@ export class PriceFilterComponent implements OnInit {
 
     this.getMaxPrice(this.prices);
 
-    if (this.paramMap.params.price) {
-      const prices = this.paramMap.params.price.split(',');
-      startValue = parseFloat(prices[0]);
-      finalValue = parseFloat(prices[1]);
-      this.minPrice = startValue;
+    if (1 !== 1) {
+      // const prices = this.paramMap.params.price.split(',');
+      // startValue = parseFloat(prices[0]);
+      // finalValue = parseFloat(prices[1]);
+      // this.minPrice = startValue;
     } else {
       finalValue = Number(this.maxPrice);
     }
@@ -82,35 +72,10 @@ export class PriceFilterComponent implements OnInit {
   }
 
   filterCollection(values: Number[]) {
-    const routeParams = this.buildFilter(this.paramMap, values);
-
-    FilterService.filterCollection(
-      this.sortService.sort(roomsList, SORT_FIELDS.RELEVANCY.value),
-      routeParams,
-      this.onLoadPage
-    );
+    this.filterChanged.emit(this.buildFilter(values));
   }
 
-  buildFilter(paramsMap: any, values: Number[]) {
-    const filterParams: any = {};
-    filterParams.keys = paramsMap.keys;
-    filterParams.params = {};
-
-    for (const param in paramsMap.params) {
-      filterParams.params[param] = paramsMap.params[param];
-    }
-
-    if (filterParams.keys['price']) {
-      filterParams.params['price'] = values;
-    } else {
-      filterParams.keys.push('price');
-      filterParams.params['price'] = values;
-    }
-
-    return filterParams;
-  }
-
-  onLoadPage = (rooms: Room[]) => {
-    this.priceChangedEmitter.emit(rooms);
+  buildFilter(values: Number[]) {
+    return {key: 'price', value: values};
   }
 }

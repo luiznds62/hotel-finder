@@ -1,5 +1,5 @@
 <div *ngIf="!loading" class="pt-3">
-    <div class="room-list-meta-container">
+    <div class="room-list-meta-container" *ngIf="rooms.length > 0">
         <span>
             <span class="text-bold">
                 {{ rooms.length }}

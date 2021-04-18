@@ -12,6 +12,10 @@ const CHECK_OUT_AVAILABLE_FILTER = 'checkOutAvailable';
 export class FilterService {
 
   static filterCollection(collection: any[], paramMap: any, cb: any): any {
+    if (Object.keys(paramMap).length === 0) {
+      cb(collection);
+    }
+
     const filters = this.extractFilters(paramMap);
     const collectionFiltered = collection.filter((item) => {
       return this.doFilterLogic(filters, item);
@@ -19,7 +23,7 @@ export class FilterService {
     cb(collectionFiltered);
   }
 
-  static doFilterLogic(filters, item) {
+  private static doFilterLogic(filters, item) {
     const conditions = filters.map((filter, index) => {
       let condition = '';
       if (Array.isArray(filter.attrb)) {
@@ -56,15 +60,15 @@ export class FilterService {
     });
   }
 
-  static filterCheckOutDate(filterInitialDate, filterFinalDate, itemInitial, itemFinal) {
+  private static filterCheckOutDate(filterInitialDate, filterFinalDate, itemInitial, itemFinal) {
     return moment(filterInitialDate) >= itemInitial && moment(filterFinalDate) <= itemFinal;
   }
 
-  static filterText(itemAttrb, value) {
+  private static filterText(itemAttrb, value) {
     return itemAttrb === value;
   }
 
-  static filterPrice(price, values) {
+  private static filterPrice(price, values) {
     if (price >= parseFloat(values[0]) && price <= parseFloat(values[1])) {
       return true;
     }
@@ -72,7 +76,7 @@ export class FilterService {
     return false;
   }
 
-  static extractFilters(paramMap: any) {
+  private static extractFilters(paramMap: any) {
     return paramMap.keys.map((key) => {
       let filterType = FilterType.TEXT;
       const filterValue = paramMap.params[key];
