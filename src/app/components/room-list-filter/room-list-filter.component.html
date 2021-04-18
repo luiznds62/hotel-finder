@@ -3,11 +3,13 @@
       <div class="col">
         <div class="card border-0 shadow">
           <div class="card-body">
+            <app-room-dates-filter (filterChanged)="filterUpdated($event)"></app-room-dates-filter>
+            <hr class="filter-divider"/>
             <app-price-filter (filterChanged)="filterUpdated($event)" [rooms]="rooms"></app-price-filter>
             <hr class="filter-divider"/>
             <app-room-details-filter (filterChanged)="filterUpdated($event)" [rooms]="rooms"></app-room-details-filter>
             <hr class="filter-divider"/>
-            <app-room-features-filter [rooms]="rooms"></app-room-features-filter>
+            <app-room-features-filter (filterChanged)="filterUpdated($event)" [rooms]="rooms"></app-room-features-filter>
           </div>
         </div>
       </div>

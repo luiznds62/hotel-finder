@@ -25,6 +25,7 @@ import {RoomListFilterComponent} from './components/room-list-filter/room-list-f
 import {PriceFilterComponent} from './components/price-filter/price-filter.component';
 import {RoomDetailsFilterComponent} from './components/room-details-filter/room-details-filter.component';
 import {RoomFeaturesFilterComponent} from './components/room-features-filter/room-features-filter.component';
+import { RoomDatesFilterComponent } from './components/room-dates-filter/room-dates-filter.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {RoomFeaturesFilterComponent} from './components/room-features-filter/roo
     RoomListFilterComponent,
     PriceFilterComponent,
     RoomDetailsFilterComponent,
-    RoomFeaturesFilterComponent
+    RoomFeaturesFilterComponent,
+    RoomDatesFilterComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgxPaginationModule],
   providers: [],

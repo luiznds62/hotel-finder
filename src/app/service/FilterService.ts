@@ -6,8 +6,8 @@ enum FilterType {
   PRICE = 'price'
 }
 
-const CHECK_IN_AVAILABLE_FILTER = 'checkInAvailable';
-const CHECK_OUT_AVAILABLE_FILTER = 'checkOutAvailable';
+const CHECK_IN_AVAILABLE_FILTER = 'initial';
+const CHECK_OUT_AVAILABLE_FILTER = 'final';
 
 export class FilterService {
 
@@ -38,8 +38,8 @@ export class FilterService {
             return this.filterCheckOutDate(
               filter.value,
               filters[index + 1].value,
-              item[CHECK_IN_AVAILABLE_FILTER],
-              item[CHECK_OUT_AVAILABLE_FILTER]
+              item.checkInAvailable,
+              item.checkOutAvailable
             );
           }
         } else if (filter.type === FilterType.TEXT) {
@@ -61,7 +61,7 @@ export class FilterService {
   }
 
   private static filterCheckOutDate(filterInitialDate, filterFinalDate, itemInitial, itemFinal) {
-    return moment(filterInitialDate) >= itemInitial && moment(filterFinalDate) <= itemFinal;
+    return moment(filterInitialDate) >= moment(itemInitial) && moment(filterFinalDate) <= moment(itemFinal);
   }
 
   private static filterText(itemAttrb, value) {

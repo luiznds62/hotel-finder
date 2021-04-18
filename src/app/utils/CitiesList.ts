@@ -1,26 +1,26 @@
 export const citiesList = [
   {
-    name: "Balneário Camboriú",
-    state: "Santa Catarina",
+    name: 'Balneário Camboriú',
+    state: 'Santa Catarina',
     imageSrc:
-      "assets/balneario.webp",
+      'assets/balneario.webp',
   },
   {
-    name: "Florianópolis",
-    state: "Santa Catarina",
+    name: 'Florianópolis',
+    state: 'Santa Catarina',
     imageSrc:
-      "assets/florianopolis.jpg",
+      'assets/florianopolis.jpg',
   },
   {
-    name: "São Paulo",
-    state: "São Paulo",
+    name: 'São Paulo',
+    state: 'São Paulo',
     imageSrc:
-      "assets/saopaulo.jpeg",
+      'assets/saopaulo.jpeg',
   },
   {
-    name: "Salvador",
-    state: "Bahia",
+    name: 'Salvador',
+    state: 'Bahia',
     imageSrc:
-      "assets/salvador.jpg",
+      'assets/salvador.jpg',
   },
 ];

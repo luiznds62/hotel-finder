@@ -68,5 +68,5 @@ export class RoomListFilterComponent implements OnInit {
 
   applyFilter = (filtered) => {
     this.filterAplied.emit(filtered);
-  };
+  }
 }

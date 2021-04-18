@@ -33,14 +33,7 @@ export class PriceFilterComponent implements OnInit {
 
     this.getMaxPrice(this.prices);
 
-    if (1 !== 1) {
-      // const prices = this.paramMap.params.price.split(',');
-      // startValue = parseFloat(prices[0]);
-      // finalValue = parseFloat(prices[1]);
-      // this.minPrice = startValue;
-    } else {
-      finalValue = Number(this.maxPrice);
-    }
+    finalValue = Number(this.maxPrice);
 
     this.createSlider(this.minPrice, this.maxPrice, startValue, finalValue);
   }

@@ -1,11 +1,10 @@
-import { Room, RoomType } from "../models/room.model";
-import * as moment from "moment";
+import {Room, RoomType} from '../models/room.model';
 
-export const DEBOUNCE_ROOM_TIME: number = 100;
+export const DEBOUNCE_ROOM_TIME = 100;
 
 export const roomsList: Room[] = [
   {
-    name: "Amazing Flat",
+    name: 'Amazing Flat',
     type: RoomType.HOTEL,
     location: 'Centro',
     price: 308,
@@ -13,8 +12,8 @@ export const roomsList: Room[] = [
     rating: 8.1,
     stars: 4,
     isPopular: true,
-    checkInAvailable: moment("2021-04-01") as any,
-    checkOutAvailable: moment("2021-04-30") as any,
+    checkInAvailable: '2021-04-01',
+    checkOutAvailable: '2021-04-30',
     evaluations: 28,
     details: {
       haveWiFi: true,
@@ -27,34 +26,34 @@ export const roomsList: Room[] = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "Florianópolis",
-      state: "Santa Catarina",
+      name: 'Florianópolis',
+      state: 'Santa Catarina',
     },
     photos: [
       {
         main: true,
         src:
-          "assets/room-pattern-1/primary.jpg",
+          'assets/room-pattern-1/primary.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-1/second.jpg",
+          'assets/room-pattern-1/second.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-1/third.jpg",
+          'assets/room-pattern-1/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-1/four.jpg",
+          'assets/room-pattern-1/four.jpg',
       },
     ],
   },
   {
-    name: "Cozy Flat",
+    name: 'Cozy Flat',
     type: RoomType.HOTEL,
     location: 'Moema',
     price: 602,
@@ -62,8 +61,8 @@ export const roomsList: Room[] = [
     rating: 7.2,
     stars: 4,
     isPopular: true,
-    checkInAvailable: moment("2021-02-01") as any,
-    checkOutAvailable: moment("2021-06-30") as any,
+    checkInAvailable: '2021-02-01',
+    checkOutAvailable: '2021-06-30',
     evaluations: 23,
     details: {
       haveWiFi: true,
@@ -77,34 +76,34 @@ export const roomsList: Room[] = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "Balneário Camboriú",
-      state: "Santa Catarina",
+      name: 'Balneário Camboriú',
+      state: 'Santa Catarina',
     },
     photos: [
       {
         main: true,
         src:
-          "assets/room-pattern-2/third.jpg",
+          'assets/room-pattern-2/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/primary.jpg",
+          'assets/room-pattern-2/primary.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/third.jpg",
+          'assets/room-pattern-2/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/four.jpg",
+          'assets/room-pattern-2/four.jpg',
       },
     ],
   },
   {
-    name: "Budget Place",
+    name: 'Budget Place',
     type: RoomType.HOTEL,
     location: 'Santa Luzia',
     price: 335,
@@ -112,8 +111,8 @@ export const roomsList: Room[] = [
     rating: 4.4,
     stars: 4,
     isPopular: true,
-    checkInAvailable: moment("2021-04-01") as any,
-    checkOutAvailable: moment("2021-04-30") as any,
+    checkInAvailable: '2021-04-01',
+    checkOutAvailable: '2021-04-30',
     evaluations: 19,
     details: {
       haveWiFi: true,
@@ -127,34 +126,34 @@ export const roomsList: Room[] = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "São Paulo",
-      state: "São Paulo",
+      name: 'São Paulo',
+      state: 'São Paulo',
     },
     photos: [
       {
         main: true,
         src:
-          "assets/room-pattern-3/primary.jpg",
+          'assets/room-pattern-3/primary.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-3/secondary.jpg",
+          'assets/room-pattern-3/secondary.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-3/third.jpg",
+          'assets/room-pattern-3/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-3/four.jpg",
+          'assets/room-pattern-3/four.jpg',
       },
     ],
   },
   {
-    name: "Designer Flat",
+    name: 'Designer Flat',
     type: RoomType.HOTEL,
     location: 'São Gonçalo',
     price: 247,
@@ -162,8 +161,8 @@ export const roomsList: Room[] = [
     rating: 1.3,
     stars: 4,
     isPopular: true,
-    checkInAvailable: moment("2021-06-01") as any,
-    checkOutAvailable: moment("2021-08-30") as any,
+    checkInAvailable: '2021-06-01',
+    checkOutAvailable: '2021-08-30',
     evaluations: 16,
     details: {
       haveWiFi: true,
@@ -177,34 +176,34 @@ export const roomsList: Room[] = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "Salvador",
-      state: "Bahia",
+      name: 'Salvador',
+      state: 'Bahia',
     },
     photos: [
       {
         main: true,
         src:
-          "assets/room-pattern-4/four.jpg",
+          'assets/room-pattern-4/four.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-4/secondary.jpg",
+          'assets/room-pattern-4/secondary.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-4/third.jpg",
+          'assets/room-pattern-4/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-4/four.jpg",
+          'assets/room-pattern-4/four.jpg',
       },
     ],
   },
   {
-    name: "Lost Studio",
+    name: 'Lost Studio',
     type: RoomType.HOTEL,
     location: 'Centro',
     price: 247,
@@ -212,8 +211,8 @@ export const roomsList: Room[] = [
     rating: 1.3,
     stars: 4,
     isPopular: true,
-    checkInAvailable: moment("2021-06-01") as any,
-    checkOutAvailable: moment("2021-08-30") as any,
+    checkInAvailable: '2021-06-01',
+    checkOutAvailable: '2021-08-30',
     evaluations: 16,
     details: {
       haveWiFi: true,
@@ -227,34 +226,34 @@ export const roomsList: Room[] = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "Salvador",
-      state: "Bahia",
+      name: 'Salvador',
+      state: 'Bahia',
     },
     photos: [
       {
         main: true,
         src:
-          "assets/room-pattern-1/four.jpg",
+          'assets/room-pattern-1/four.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-1/second.jpg",
+          'assets/room-pattern-1/second.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-1/third.jpg",
+          'assets/room-pattern-1/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-1/four.jpg",
+          'assets/room-pattern-1/four.jpg',
       },
     ],
   },
   {
-    name: "Central Place",
+    name: 'Central Place',
     type: RoomType.HOTEL,
     location: 'Universitário',
     price: 442,
@@ -262,8 +261,8 @@ export const roomsList: Room[] = [
     rating: 10,
     stars: 5,
     isPopular: true,
-    checkInAvailable: moment("2021-06-01") as any,
-    checkOutAvailable: moment("2021-08-30") as any,
+    checkInAvailable: '2021-06-01',
+    checkOutAvailable: '2021-08-30',
     evaluations: 16,
     details: {
       haveWiFi: true,
@@ -277,34 +276,34 @@ export const roomsList: Room[] = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "Salvador",
-      state: "Bahia",
+      name: 'Salvador',
+      state: 'Bahia',
     },
     photos: [
       {
         main: true,
         src:
-          "assets/room-pattern-2/third.jpg",
+          'assets/room-pattern-2/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/second.jpg",
+          'assets/room-pattern-2/second.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/third.jpg",
+          'assets/room-pattern-2/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/four.jpg",
+          'assets/room-pattern-2/four.jpg',
       },
     ],
   },
   {
-    name: "Nice Place",
+    name: 'Nice Place',
     type: RoomType.HOTEL,
     location: 'Universitário',
     price: 442,
@@ -312,8 +311,8 @@ export const roomsList: Room[] = [
     rating: 10,
     stars: 5,
     isPopular: true,
-    checkInAvailable: moment("2021-06-01") as any,
-    checkOutAvailable: moment("2021-08-30") as any,
+    checkInAvailable: '2021-06-01',
+    checkOutAvailable: '2021-08-30',
     evaluations: 16,
     details: {
       haveWiFi: true,
@@ -327,34 +326,34 @@ export const roomsList: Room[] = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "Salvador",
-      state: "Bahia",
+      name: 'Salvador',
+      state: 'Bahia',
     },
     photos: [
       {
         main: true,
         src:
-          "assets/room-pattern-2/four.jpg",
+          'assets/room-pattern-2/four.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/second.jpg",
+          'assets/room-pattern-2/second.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/third.jpg",
+          'assets/room-pattern-2/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/four.jpg",
+          'assets/room-pattern-2/four.jpg',
       },
     ],
   },
   {
-    name: "Beautiful Flat",
+    name: 'Beautiful Flat',
     type: RoomType.HOTEL,
     location: 'Universitário',
     price: 442,
@@ -362,8 +361,8 @@ export const roomsList: Room[] = [
     rating: 10,
     stars: 5,
     isPopular: true,
-    checkInAvailable: moment("2021-06-01") as any,
-    checkOutAvailable: moment("2021-08-30") as any,
+    checkInAvailable: '2021-06-01',
+    checkOutAvailable: '2021-08-30',
     evaluations: 16,
     details: {
       haveWiFi: true,
@@ -377,29 +376,29 @@ export const roomsList: Room[] = [
       isTakingSafetyMeasures: true,
     },
     city: {
-      name: "Salvador",
-      state: "Bahia",
+      name: 'Salvador',
+      state: 'Bahia',
     },
     photos: [
       {
         main: true,
         src:
-          "assets/room-pattern-2/third.jpg",
+          'assets/room-pattern-2/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/second.jpg",
+          'assets/room-pattern-2/second.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/third.jpg",
+          'assets/room-pattern-2/third.jpg',
       },
       {
         main: false,
         src:
-          "assets/room-pattern-2/four.jpg",
+          'assets/room-pattern-2/four.jpg',
       },
     ],
   },
