@@ -2,36 +2,36 @@
   <span class="filter-title">Comodidades</span>
   <div class="checkboxes-container">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label check-container" for="flexCheckDefault">
+      <input [(ngModel)]="haveFreeBreakfast" (ngModelChange)="onChanged('haveFreeBreakfast')" class="form-check-input" type="checkbox" value="" id="haveFreeBreakfast">
+      <label class="form-check-label check-container" for="haveFreeBreakfast">
         <span class="text-gray">Café da manhã grátis</span>
         <span class="text-gray quantity">{{roomsQuantityForDetails.haveFreeBreakfast}}</span>
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-      <label class="form-check-label check-container" for="flexCheckChecked">
+      <input [(ngModel)]="haveWiFi" (ngModelChange)="onChanged('haveWiFi')"  class="form-check-input" type="checkbox" value="" id="haveWifi">
+      <label class="form-check-label check-container" for="haveWifi">
         <span class="text-gray">Wi-fi gratuito</span>
         <span class="text-gray quantity">{{roomsQuantityForDetails.haveWifi}}</span>
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-      <label class="form-check-label check-container" for="flexCheckChecked">
+      <input [(ngModel)]="haveFreeParkingSpace" (ngModelChange)="onChanged('haveFreeParkingSpace')" class="form-check-input" type="checkbox" value="" id="haveFreeParkingSpace">
+      <label class="form-check-label check-container" for="haveFreeParkingSpace">
         <span class="text-gray">Estacionamento gratuito</span>
         <span class="text-gray quantity">{{roomsQuantityForDetails.haveFreeParkingSpace}}</span>
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-      <label class="form-check-label check-container" for="flexCheckChecked">
+      <input [(ngModel)]="haveRestaurant" (ngModelChange)="onChanged('haveRestaurant')" class="form-check-input" type="checkbox" value="" id="haveRestaurant">
+      <label class="form-check-label check-container" for="haveRestaurant">
         <span class="text-gray">Restaurante</span>
         <span class="text-gray quantity">{{roomsQuantityForDetails.haveRestaurant}}</span>
       </label>
     </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-      <label class="form-check-label check-container" for="flexCheckChecked">
+    <div [(ngModel)]="haveTv" (ngModelChange)="onChanged('haveTv')" ngDefaultControl class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="haveTv">
+      <label class="form-check-label check-container" for="haveTv">
         <span class="text-gray">TV a cabo</span>
         <span class="text-gray quantity">{{roomsQuantityForDetails.haveTv}}</span>
       </label>

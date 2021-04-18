@@ -23,7 +23,7 @@ export class PriceFilterComponent implements OnInit {
   maxPrice: any = 0;
   paramMap: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private activatedRoute: ActivatedRoute) {
     this.sortService = new SortService();
   }
 
