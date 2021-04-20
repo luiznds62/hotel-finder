@@ -1,0 +1,161 @@
+<app-navbar></app-navbar>
+<app-loading-spinner *ngIf="loading"></app-loading-spinner>
+
+<div class="room-detail-container" *ngIf="!loading && room">
+  <div class="row">
+    <div class="col-md-5 d-none d-md-block">
+      <div class="room-detail-main-image-container">
+        <img (click)="showImageModal(room.photos[0].src)" class="image-fluid room-detail-main-image shadow-sm" src="{{ room.photos[0].src }}"/>
+        <div class="room-detail-main-image-list">
+          <img (click)="showImageModal(room.photos[1].src)" class="room-detail-secondary-image shadow-sm mr-2" src="{{ room.photos[1].src }}"/>
+          <img (click)="showImageModal(room.photos[2].src)" class="room-detail-secondary-image shadow-sm mr-2" src="{{ room.photos[2].src }}"/>
+          <img (click)="showImageModal(room.photos[3].src)" class="room-detail-secondary-image shadow-sm" src="{{ room.photos[3].src }}"/>
+        </div>
+      </div>
+      <app-image-modal [imageSrc]="imageSrc" [show]="showModal"></app-image-modal>
+      <div class="room-detail-map-container">
+        <google-map
+          height="500px"
+          width="100%"
+          [zoom]="zoom"
+          [center]="center"
+          [options]="options"
+        >
+        </google-map>
+      </div>
+    </div>
+    <div class="col-md-7 col-sm-12">
+      <div class="room-detail-main-content-container">
+        <div class="room-detail-title">
+          <span class="heading-title">{{room.name}}</span>
+          <span class="sub-heading-title text-gray room-detail-city">{{room.city.name}}</span>
+        </div>
+        <div class="room-detail-evaluations">
+          <span class="room-detail-stars">
+            <app-stars-rating [stars]="room.stars"></app-stars-rating>
+            <span class="room-detail-evaluation">({{room.evaluations}})</span>
+          </span>
+        </div>
+        <div class="room-details-ratings">
+          <app-rating [rating]="room.rating"></app-rating>
+        </div>
+        <div class="room-details-location-container">
+          <i class="fas fa-map-marker-alt text-primary"></i>
+          <span *ngIf="room.details.isInCenter" class="text-location">Localizado no centro da cidade</span>
+          <span *ngIf="!room.details.isInCenter" class="text-location">{{room.details.distanceToCenterKM}} km até o centro da cidade</span>
+        </div>
+        <div class="room-details-description-container">
+          <p class="room-details-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            tincidunt lobortis ex, vel consequat mi
+            dignissim et. Etiam laoreet mi vitae ligula viverra, et posuere est convallis. Quisque gravida, lacus nec
+            placerat tincidunt, quam orci feugiat leo, sit amet ullamcorper ipsum risus vel risus. Quisque sit amet urna
+            purus. Praesent vestibulum odio arcu, sed egestas mauris tristique quis. Nunc hendrerit lobortis fringilla.
+            Nulla at nisi id elit accumsan accumsan sed a nunc. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Nullam fermentum tortor sit amet justo posuere, et rhoncus lorem porta</p>
+        </div>
+        <div class="room-details-features-container">
+          <span class="text-bold">Visão geral</span>
+          <div class="card shadow-sm mt-2">
+            <div class="card-body">
+              <div class="room-details-features-list">
+                <div>
+                  <i class="fas fa-bed text-primary"></i>
+                  <span>{{room.details.rooms}} quartos</span>
+                </div>
+                <div>
+                  <i class="fas fa-bath text-primary"></i>
+                  <span>{{room.details.bathroomsQuantity}} {{room.details.bathroomsQuantity > 1 ? 'banheiros' : 'banheiro'}}</span>
+                </div>
+                <div>
+                  <i class="fas fa-users text-primary"></i>
+                  <span>{{room.details.maxGuests}} {{room.details.maxGuests > 1 ? 'hóspedes' : 'hóspede'}}</span>
+                </div>
+                <div>
+                  <i class="fas fa-moon text-primary"></i>
+                  <span>{{room.details.minDiary}} {{room.details.minDiary > 1 ? 'diárias' : 'diária'}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room-details-details-and-price-container">
+          <div class="room-details-details-container">
+            <span class="text-bold">Principais comodidades do {{room.type}}</span>
+            <div class="card shadow-sm mt-2">
+              <div class="card-body">
+                <div class="room-details-lists-container">
+                  <ul class="list-unstyled flex-wrap">
+                    <li *ngIf="room.details.haveWiFi" class="detail-list-item  pt-2">
+                      <i class="fas fa-check"></i>
+                      <span>WiFi grátis</span>
+                    </li>
+                    <li *ngIf="room.details.haveFreeParkingSpace" class="detail-list-item pt-2">
+                      <i class="fas fa-check"></i>
+                      <span>Estacionamento grátis</span>
+                    </li>
+                    <li *ngIf="room.details.haveFreeBreakfast" class="detail-list-item  pt-2">
+                      <i class="fas fa-check"></i>
+                      <span>Café da manhã grátis</span>
+                    </li>
+                    <li *ngIf="room.details.haveTv" class="detail-list-item  pt-2">
+                      <i class="fas fa-check"></i>
+                      <span>TV / Opções de entretenimento</span>
+                    </li>
+                    <li *ngIf="room.details.havePool" class="detail-list-item  pt-2">
+                      <i class="fas fa-check"></i>
+                      <span>Piscina</span>
+                    </li>
+                    <li *ngIf="room.details.haveHairdryer" class="detail-list-item  pt-2 pb-2">
+                      <i class="fas fa-check"></i>
+                      <span>Secador de cabelo</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="room-details-price-container pb-4">
+            <span class="text-bold">Preço e Datas</span>
+            <div class="card shadow-sm mt-2">
+              <div class="card-body">
+                <div class="room-details-dates-container">
+                  <input
+                    class="form-control"
+                    type="date"
+                    value="{{room.checkInAvailable}}"
+                    disabled
+                  />
+                  <span class="date-filter-divider">até</span>
+                  <input
+                    class="form-control"
+                    type="date"
+                    value="{{room.checkOutAvailable}}"
+                    disabled
+                  />
+                </div>
+                <div class="room-details-prices-container">
+                  <h3
+                    [ngClass]="{
+              'card-room-list-item-room-price-out': room.promotionalPrice !== 0
+            }"
+                    class="card-room-list-item-room-price"
+                  >
+                    {{ room.price | currency: "BRL" }}
+                  </h3>
+                  <h3
+                    *ngIf="room.promotionalPrice !== 0"
+                    class="card-room-list-item-room-promotional-price"
+                  >
+                    {{ room.promotionalPrice | currency: "BRL" }}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+

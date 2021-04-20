@@ -1,0 +1,18 @@
+<div class="date-filter-container">
+  <span class="filter-title">Datas</span>
+  <div class="date-filter-items">
+    <input
+      class="form-control"
+      type="date"
+      [(ngModel)]="initialDate"
+      (ngModelChange)="onChangeInitial()"
+    />
+    <span class="date-filter-divider">até</span>
+    <input
+      class="form-control"
+      type="date"
+      [(ngModel)]="finalDate"
+      (ngModelChange)="onChangeFinal()"
+    />
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="room-feature-filter-container">
+  <span class="filter-title">Características</span>
+  <div class="checkboxes-container">
+    <div class="form-check">
+      <input [(ngModel)]="isTakingSafetyMeasures" (ngModelChange)="onChanged('isTakingSafetyMeasures')" class="form-check-input" type="checkbox" value="" id="isTakingSafetyMeasures">
+      <label class="form-check-label check-container" for="isTakingSafetyMeasures">
+        <span class="text-gray">Estabelecimentos com medidas de segurança em vigor</span>
+        <span class="text-gray quantity">{{roomsQuantityForDetails.isTakingSafetyMeasures}}</span>
+      </label>
+    </div>
+    <div class="form-check">
+      <input [(ngModel)]="isInCenter" (ngModelChange)="onChanged('isInCenter')" class="form-check-input" type="checkbox" value="" id="isInCenter">
+      <label class="form-check-label check-container" for="isInCenter">
+        <span class="text-gray">Localizado no centro da cidade</span>
+        <span class="text-gray quantity">{{roomsQuantityForDetails.isInCenter}}</span>
+      </label>
+    </div>
+    <div class="form-check">
+      <input [(ngModel)]="haveFreeCancelation" (ngModelChange)="onChanged('haveFreeCancelation')" class="form-check-input" type="checkbox" value="" id="haveFreeCancelation">
+      <label class="form-check-label check-container" for="haveFreeCancelation">
+        <span class="text-gray">Possui cancelamento grátis</span>
+        <span class="text-gray quantity">{{roomsQuantityForDetails.haveFreeCancelation}}</span>
+      </label>
+    </div>
+  </div>
+</div>
