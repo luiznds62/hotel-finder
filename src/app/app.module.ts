@@ -28,6 +28,7 @@ import {RoomFeaturesFilterComponent} from './components/room-features-filter/roo
 import {RoomDatesFilterComponent} from './components/room-dates-filter/room-dates-filter.component';
 import {RoomDetailsComponent} from './screens/room-details/room-details.component';
 import {GoogleMapsModule} from '@angular/google-maps';
+import { ImageModalComponent } from './components/image-modal/image-modal.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {GoogleMapsModule} from '@angular/google-maps';
     RoomDetailsFilterComponent,
     RoomFeaturesFilterComponent,
     RoomDatesFilterComponent,
-    RoomDetailsComponent
+    RoomDetailsComponent,
+    ImageModalComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgxPaginationModule, GoogleMapsModule],
   providers: [],
