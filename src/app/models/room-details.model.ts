@@ -4,8 +4,14 @@ export class RoomDetails {
   haveFreeCancelation: boolean;
   haveFreeParkingSpace: boolean;
   haveTv: boolean;
+  havePool: boolean;
+  haveHairdryer: boolean;
   haveRestaurant: boolean;
   isInCenter: boolean;
   distanceToCenterKM?: number;
   isTakingSafetyMeasures: boolean;
+  rooms: number;
+  maxGuests: number;
+  bathroomsQuantity: number;
+  minDiary: number;
 }

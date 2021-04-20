@@ -62,7 +62,7 @@
           </h3>
         </div>
         <div class="card-room-list-item-room-actions">
-          <button class="btn btn-details">Ver detalhes</button>
+          <button (click)="moveToDetails(room.id)" class="btn btn-details">Ver detalhes</button>
         </div>
         <div
           *ngIf="room.details.haveFreeCancelation"
